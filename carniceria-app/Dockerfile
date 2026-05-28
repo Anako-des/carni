@@ -19,8 +19,8 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copiamos el archivo de configuración de rutas
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# IMPORTANTE: Aquí usamos la ruta exacta que encontraste
-COPY --from=build /app/dist/carniceria/browser /usr/share/nginx/html
+# LA RUTA CORRECTA: Usando carniceria-app
+COPY --from=build /app/dist/carniceria-app/browser /usr/share/nginx/html
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
