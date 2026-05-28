@@ -1,5 +1,5 @@
 # Etapa 1: Compilación de Angular
-FROM node:18 AS build
+FROM node:22 AS build
 WORKDIR /app
 
 # Copiar package.json e instalar dependencias
