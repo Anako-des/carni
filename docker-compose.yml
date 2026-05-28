@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: carniceria_db # Cambia esto por el nombre exacto de tu DB
+      MYSQL_DATABASE: pag_carni # Cambia esto por el nombre exacto de tu DB
     ports:
       - "3306:3306"
     volumes:
