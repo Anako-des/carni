@@ -1,0 +1,79 @@
+<!-- ORIGINAL - no se tocó nada, solo se agregó *ngIf al botón -->
+<div class="header-container">
+  <button class="btn-login" (click)="irLogin()" *ngIf="!autenticado">
+    🔐 Iniciar sesión
+  </button>
+</div>
+
+<div class="contenedor">
+
+  <div class="columna">
+    <h2>🥩 RES</h2>
+    <div class="productos-container-columna">
+      <ng-container *ngFor="let producto of productosFiltrados">
+        <div class="card" *ngIf="producto.categoria === 'Res'">
+          <img *ngIf="producto.imagen" [src]="producto.imagen" alt="{{ producto.nombre }}">
+          <div class="producto-info">
+            <h3>{{ producto.nombre }}</h3>
+            <p class="precio">💲 ${{ producto.precio }}</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="columna">
+    <h2>🍗 POLLO</h2>
+    <div class="productos-container-columna">
+      <ng-container *ngFor="let producto of productosFiltrados">
+        <div class="card" *ngIf="producto.categoria === 'Pollo'">
+          <img *ngIf="producto.imagen" [src]="producto.imagen" alt="{{ producto.nombre }}">
+          <div class="producto-info">
+            <h3>{{ producto.nombre }}</h3>
+            <p class="precio">💲 ${{ producto.precio }}</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="columna">
+    <h2>🐷 CERDO</h2>
+    <div class="productos-container-columna">
+      <ng-container *ngFor="let producto of productosFiltrados">
+        <div class="card" *ngIf="producto.categoria === 'Cerdo'">
+          <img *ngIf="producto.imagen" [src]="producto.imagen" alt="{{ producto.nombre }}">
+          <div class="producto-info">
+            <h3>{{ producto.nombre }}</h3>
+            <p class="precio">💲 ${{ producto.precio }}</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+</div>
+
+<div class="sin-productos" *ngIf="productosFiltrados.length === 0">
+  😢 No se encontraron productos
+</div>
+
+<div class="contacto">
+  <h2>📞 CONTACTO Y UBICACIÓN</h2>
+  <div class="contenedor-contacto">
+    <div class="card-contacto">
+      <h3>📍 Ubicación</h3>
+      <p>Av. Principal #123, Col. Centro</p>
+    </div>
+    <div class="card-contacto">
+      <h3>🕒 Horarios</h3>
+      <p>Lunes a Viernes:<br>8:00 AM - 6:00 PM</p>
+      <p>Sábados y Domingos:<br>8:00 AM - 3:00 PM</p>
+    </div>
+    <div class="card-contacto">
+      <h3>☎️ Teléfono</h3>
+      <p>55-1234-5678</p>
+      <p>¡Haz tu pedido!</p>
+    </div>
+  </div>
+</div>

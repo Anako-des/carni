@@ -1,0 +1,40 @@
+.nav-principal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #1a1a1a;
+  padding: 10px 20px;
+}
+
+.nav-principal a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-principal a.activo,
+.nav-principal a:hover {
+  background: #8b0000;
+  color: white;
+}
+
+.btn-nav-logout {
+  margin-left: auto;
+  padding: 6px 14px;
+  background: transparent;
+  color: #ccc;
+  border: 1.5px solid #555;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-nav-logout:hover {
+  background: #8b0000;
+  color: white;
+  border-color: #8b0000;
+}

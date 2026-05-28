@@ -1,0 +1,62 @@
+.inventario {
+  padding: 20px;
+}
+
+.inv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.inv-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.btn-logout {
+  padding: 8px 16px;
+  background: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-logout:hover {
+  background: #b22222;
+}
+
+.tabla {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.fila {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.encabezado {
+  background: #8b0000;
+  color: white;
+  font-weight: bold;
+}
+
+.bajo {
+  color: red;
+  font-weight: bold;
+}
+
+.vacio {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-style: italic;
+}

@@ -1,0 +1,36 @@
+<div class="cards-resumen">
+  <div class="kpi-card azul">
+    <div class="kpi-icono">📅</div>
+    <div class="kpi-info">
+      <p class="kpi-label">Semana actual</p>
+      <p class="kpi-valor">{{ semanaInicio || 'Sin datos' }}</p>
+    </div>
+  </div>
+  <div class="kpi-card verde">
+    <div class="kpi-icono">💰</div>
+    <div class="kpi-info">
+      <p class="kpi-label">Total semana</p>
+      <p class="kpi-valor">${{ totalSemana | number }}</p>
+    </div>
+  </div>
+  <div class="kpi-card rojo">
+    <div class="kpi-icono">🗂️</div>
+    <div class="kpi-info">
+      <p class="kpi-label">Semanas registradas</p>
+      <p class="kpi-valor">{{ semanasRegistradas }}</p>
+    </div>
+  </div>
+</div>
+<section class="panel mt-4">
+  <h3><span>🏆</span> Top 5 Productos más vendidos (Histórico)</h3>
+  <div class="productos-lista">
+    <div class="producto-row" *ngFor="let p of topProductos; let i = index">
+      <span class="prod-rank">#{{ i + 1 }}</span>
+      <span class="prod-nombre">{{ p.nombre }}</span>
+      <div class="prod-barra-wrap">
+        <div class="prod-barra" [style.width.%]="(p.total_kilos / topProductos[0].total_kilos) * 100"></div>
+      </div>
+      <span class="prod-kilos">{{ p.total_kilos }} Kg</span>
+    </div>
+  </div>
+</section>

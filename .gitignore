@@ -1,0 +1,15 @@
+# Caché de Python
+__pycache__/
+*.pyc
+
+# Entornos virtuales de Python (si llegas a crear uno)
+venv/
+env/
+
+# Dependencias de Angular
+carniceria-app/node_modules/
+carniceria-app/dist/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db

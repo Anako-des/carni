@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  db-server:
+    image: mysql:8.0
+    container_name: db-server
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: carniceria_db # Cambia esto por el nombre exacto de tu DB
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      # Aquí le decimos que ejecute tu archivo pag_car.sql
+      - ./pag_car.sql:/docker-entrypoint-initdb.d/init.sql
+
+  mi-api-flask:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: mi-api-flask
+    restart: always
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db-server
+
+  mi-sitio-web:
+    build: 
+      context: ./carniceria-app # Apunta a tu carpeta de Angular
+      dockerfile: Dockerfile
+    container_name: mi-sitio-web
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - mi-api-flask
+
+volumes:
+  db_data:

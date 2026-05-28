@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #8b0000, #b22222);
+  padding: 15px 20px;
+  color: white;
+}
+
+/* BUSCADOR */
+.buscador input {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  width: 300px;
+  font-size: 1rem;
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.buscador input::placeholder {
+  color: #999;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .buscador input {
+    width: 100%;
+  }
+}
