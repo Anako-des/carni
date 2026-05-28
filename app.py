@@ -538,4 +538,5 @@ def login():
     }), 401
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # El host="0.0.0.0" es OBLIGATORIO para que Docker deje salir la conexión
+    app.run(host="0.0.0.0", port=5000, debug=True)
