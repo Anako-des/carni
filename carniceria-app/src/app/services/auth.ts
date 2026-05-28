@@ -17,7 +17,7 @@ export interface LoginResponse {
 })
 export class AuthService {
 
-  private BASE_URL = 'http://localhost:5000';
+  private BASE_URL = 'http://34.151.214.143:5000';
   private STORAGE_KEY = 'usuario';
 
   constructor(private http: HttpClient) {}

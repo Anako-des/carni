@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class ProductosService {
 
-  private API_URL = 'http://localhost:5000/productos';
+  private API_URL = 'http://34.151.214.143:5000/productos';
 
   private busquedaSubject = new BehaviorSubject<string>('');
 

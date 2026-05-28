@@ -2,11 +2,10 @@ import mysql.connector
 
 def get_connection():
     return mysql.connector.connect(
-        host="localhost",
-        port=3307,
-        user="alon",
-        password="123456789",
-        database="pag_carni",
+        host="db-server",       # ¡Clave! Este es el nombre del contenedor de la BD en docker-compose
+        port=3306,              # Puerto interno por defecto de MySQL en Docker
+        user="root",            # El usuario que definiste en docker-compose (suele ser root)
+        password="rootpassword",# La contraseña de tu docker-compose
+        database="carniceria_db", # O el nombre exacto de la BD en tu docker-compose
         charset="utf8mb4"
     )
-    

@@ -7,7 +7,8 @@ from config import get_connection
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://34.151.214.143:4200"}}, supports_credentials=True)
+#CORS(app, resources={r"/*": {"origins": "http://34.151.214.143:4200"}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 # ════════════════════════════════════════
 #  CATEGORÍAS  (tabla: categoria)

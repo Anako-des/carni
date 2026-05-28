@@ -76,7 +76,7 @@ export class LoginComponent {
   exitoCrear = '';
   cargandoCrear = false;
 
-  private BASE_URL = 'http://localhost:5000';
+  private BASE_URL = 'http://34.151.214.143:5000';
 
   abrirCrear(): void {
     this.modoCrear = true;
